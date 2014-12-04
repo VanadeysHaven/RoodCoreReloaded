@@ -18,8 +18,8 @@ public class TPCommand implements CommandExecutor {
 				if(args.length == 1){
 					Location targetLoc = target.getLocation();
 					p.teleport(targetLoc);
-					p.sendMessage(Main.TPTag + "You were teleported to: §c" + target + "§a.");
-					target.sendMessage(Main.TPTag + "§c" + p + "§a teleported to you.");
+					p.sendMessage(Main.TPTag + "You were teleported to: §c" + target.getDisplayName() + "§a.");
+					target.sendMessage(Main.TPTag + "§c" + p.getDisplayName() + "§a teleported to you.");
 				} else { 
 					p.sendMessage(Main.TPTag + Main.Error + "Please provide the target player.");
 				} 
