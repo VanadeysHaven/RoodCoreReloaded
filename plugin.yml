@@ -7,7 +7,7 @@
  author: cooltimmetje
  main: me.cooltimmetje.RoodCoreReloaded.Main
  commands:
-   basic:
+   tp:
       description: A better TP command.
       usage: /<command> [player]
       permission: rcr.tp
