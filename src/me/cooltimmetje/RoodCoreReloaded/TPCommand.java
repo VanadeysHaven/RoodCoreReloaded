@@ -36,6 +36,7 @@ public class TPCommand implements CommandExecutor {
 			} else {
 				p.sendMessage(Main.TPTag + Main.Error + "You do not have access to this command.");
 				p.sendMessage(Main.NoTag + "Permission(s) missing: §8[§brcr.tp§8]");
+				return false;
 			}
 		}
 		return true;
