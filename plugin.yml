@@ -1,0 +1,8 @@
+ name: RoodCoreReloaded
+ version: 1.4.1
+ description: RoodCoreReloaded
+ # We could place every author in the authors list, but chose not to for illustrative purposes
+ # Also, having an author distinguishes that person as the project lead, and ensures their 
+ # name is displayed first
+ author: cooltimmetje
+ main: me.cooltimmetje.RoodCoreReloaded.Main
