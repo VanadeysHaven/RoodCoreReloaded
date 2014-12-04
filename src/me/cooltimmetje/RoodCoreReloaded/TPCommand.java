@@ -12,7 +12,7 @@ public class TPCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
-		Player target = Bukkit.getPlayer(args[0]);
+		Player target = Bukkit.getPlayerExact(args[0]);
 		if (cmd.getName().equalsIgnoreCase("tp")) {
 			if (p.hasPermission("rcr.tp")){
 				if(args.length == 1){
