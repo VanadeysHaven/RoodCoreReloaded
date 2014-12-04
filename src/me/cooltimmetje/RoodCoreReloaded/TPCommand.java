@@ -16,7 +16,7 @@ public class TPCommand implements CommandExecutor {
 			if(p.hasPermission("rcr.tp")){
 				if(args.length == 1){
 					Player target = Bukkit.getServer().getPlayer(args[0]);
-					if(!target.equals(null) || !target.equals(p)){
+					if(!(target == null)){
 						Location targetLoc = target.getLocation();
 						p.teleport(targetLoc);
 						p.sendMessage(Main.TPTag + "You have been teleported to: " + target.getDisplayName());
