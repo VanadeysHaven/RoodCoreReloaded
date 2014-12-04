@@ -6,3 +6,8 @@
  # name is displayed first
  author: cooltimmetje
  main: me.cooltimmetje.RoodCoreReloaded.Main
+ commands:
+   basic:
+      description: A better TP command.
+      usage: /<command> [player]
+      permission: rcr.tp
