@@ -12,7 +12,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 
 	public void onEnable() {
 		plugin = this;
-		//This is where we register our events/commands
+		getCommand("tp").setExecutor(new TPCommand());
 	}
 
 	public void onDisable() {
@@ -32,8 +32,11 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static Plugin getPlugin() {
 		return plugin;
 	}
-
-
+	
+	public static String TPTag = "§8[§cTP§8] §a";
+	public static String NoTag = "§e>§6>§4> §a";
+	public static String Error = "§c§lERROR §a";
+	public static String CodeRood = "§8[§4§lCodeR00D§8] §a";
 
 
 }
