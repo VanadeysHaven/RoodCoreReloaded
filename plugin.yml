@@ -9,4 +9,3 @@
  commands:
    tp:
       description: A better TP command.
-      permission: rcr.tp

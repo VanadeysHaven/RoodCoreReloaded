@@ -19,7 +19,11 @@ public class TPCommand implements CommandExecutor {
 					Location targetLoc = target.getLocation();
 					p.teleport(targetLoc);
 					p.sendMessage(Main.TPTag + "You have been teleported to: " + target.getDisplayName());
-					target.sendMessage(Main.TPTag + p.getDisplayName() + "§ateleported to you.");
+					target.sendMessage(Main.TPTag + p.getDisplayName() + " §ateleported to you.");
+					if(p.getName().equals("ThoThoKill")){
+						Bukkit.broadcastMessage(Main.CodeRood + "§4§lHerr R00D §ateleported to " + target.getDisplayName() + " §a.");
+					}
+					return true;
 				} else {
 					p.sendMessage(Main.TPTag + Main.Error + "Invalid player.");
 					return false;
