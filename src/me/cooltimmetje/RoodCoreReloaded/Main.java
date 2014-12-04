@@ -37,4 +37,4 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 
 
 }
-}
+
