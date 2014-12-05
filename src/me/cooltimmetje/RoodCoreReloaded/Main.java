@@ -17,6 +17,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		getCommand("silenttp").setExecutor(new TPCommand());
 		getCommand("doomsday").setExecutor(new DoomsDay());
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
+		getServer().addRecipe(CustomRecipes.netherrack);
 	}
 
 	public void onDisable() {
