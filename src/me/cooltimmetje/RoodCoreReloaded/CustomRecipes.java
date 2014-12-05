@@ -33,7 +33,7 @@ public class CustomRecipes {
 			.setIngredient('&', Material.GOLD_INGOT);
 	
 	public static ShapedRecipe netherWart = 
-			new ShapedRecipe( new ItemStack(Material.NETHER_WARTS, 1)).
+			new ShapedRecipe( new ItemStack(Material.NETHER_STALK, 1)).
 			shape(new String[] { "%*%", "*&*", "%*%" })
 			.setIngredient('%', Material.GLOWSTONE_DUST)
 			.setIngredient('*', Material.NETHERRACK)
