@@ -7,7 +7,7 @@ import org.bukkit.inventory.ShapelessRecipe;
 public class CustomRecipes {
 
 	public static ShapelessRecipe glowstoneDust = 
-			new ShapelessRecipe(new ItemStack(Material.GLOWSTONE, 16))
+			new ShapelessRecipe(new ItemStack(Material.GLOWSTONE_DUST, 16))
 	.addIngredient(Material.REDSTONE)
 	.addIngredient(Material.GOLD_INGOT)
 	.addIngredient(Material.GLASS);
