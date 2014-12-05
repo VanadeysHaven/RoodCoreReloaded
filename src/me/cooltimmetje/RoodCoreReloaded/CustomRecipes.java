@@ -18,4 +18,10 @@ public class CustomRecipes {
 			shape(new String[] { "*% ", "%* ", "   " })
 			.setIngredient('%', Material.SPIDER_EYE)
 			.setIngredient('*', Material.COBBLESTONE);
+	
+	public static ShapedRecipe netherQuarts = 
+			new ShapedRecipe( new ItemStack(Material.QUARTZ, 1)).
+			shape(new String[] { "  ", "%*%", "   " })
+			.setIngredient('%', Material.PAPER)
+			.setIngredient('*', Material.NETHERRACK);
 }

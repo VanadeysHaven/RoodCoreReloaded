@@ -18,6 +18,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		getCommand("doomsday").setExecutor(new DoomsDay());
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
 		getServer().addRecipe(CustomRecipes.netherrack);
+		getServer().addRecipe(CustomRecipes.netherQuarts);
 	}
 
 	public void onDisable() {
