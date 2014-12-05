@@ -28,12 +28,10 @@ public class TPCommand implements CommandExecutor {
 						}
 						p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 						p.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100, 1));
-						p.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 100, 2));
 						p.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 20, 1));
 						p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20, 1));
 						target.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 						target.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100, 1));
-						target.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 100, 2));
 						return true;
 					} else {
 						p.sendMessage(Main.TPTag + Main.Error + "Invalid player.");
