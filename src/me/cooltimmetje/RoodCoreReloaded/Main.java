@@ -14,11 +14,12 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		plugin = this;
 		registerEvents(this, new XPStorage());
 		getCommand("tp").setExecutor(new TPCommand());
+		getServer().addRecipe(CustomRecipes.glowstoneDust);
 	}
 
 	public void onDisable() {
 		plugin = null;//To stop memory leeks
-
+		getServer().resetRecipes();
 	}
 
 
@@ -33,7 +34,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static Plugin getPlugin() {
 		return plugin;
 	}
-	
+
 	public static String TPTag = "§8[§cTP§8] §a";
 	public static String NoTag = "§e>§6>§c> §a";
 	public static String Error = "§c§lERROR §a";
