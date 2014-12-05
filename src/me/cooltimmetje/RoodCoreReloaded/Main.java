@@ -19,6 +19,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
 		getServer().addRecipe(CustomRecipes.netherrack);
 		getServer().addRecipe(CustomRecipes.netherQuarts);
+		getServer().addRecipe(CustomRecipes.blazeRod);
 	}
 
 	public void onDisable() {

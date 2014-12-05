@@ -21,7 +21,14 @@ public class CustomRecipes {
 	
 	public static ShapedRecipe netherQuarts = 
 			new ShapedRecipe( new ItemStack(Material.QUARTZ, 1)).
-			shape(new String[] { "  ", "%*%", "   " })
+			shape(new String[] { "   ", "%*%", "   " })
 			.setIngredient('%', Material.PAPER)
 			.setIngredient('*', Material.NETHERRACK);
+	
+	public static ShapedRecipe blazeRod = 
+			new ShapedRecipe( new ItemStack(Material.BLAZE_ROD, 1)).
+			shape(new String[] { "%%%", "%*%", "%&%" })
+			.setIngredient('%', Material.GLOWSTONE_DUST)
+			.setIngredient('*', Material.STICK)
+			.setIngredient('&', Material.GOLD_INGOT);
 }
