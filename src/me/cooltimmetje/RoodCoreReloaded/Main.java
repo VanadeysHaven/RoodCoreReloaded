@@ -19,7 +19,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 
 	public void onDisable() {
 		plugin = null;//To stop memory leeks
-		getServer().clearRecipes();
+		getServer().resetRecipes();
 	}
 
 
