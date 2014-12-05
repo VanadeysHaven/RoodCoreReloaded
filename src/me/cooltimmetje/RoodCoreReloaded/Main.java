@@ -35,7 +35,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	}
 	
 	public static String TPTag = "§8[§cTP§8] §a";
-	public static String NoTag = "§e>§6>§4> §a";
+	public static String NoTag = "§e>§6>§c> §a";
 	public static String Error = "§c§lERROR §a";
 	public static String CodeRood = "§8[§4§lCodeR00D§8] §a";
 	public static String XpTag = "§8[§aXP§8] §a";
