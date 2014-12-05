@@ -15,6 +15,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		registerEvents(this, new XPStorage());
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("silenttp").setExecutor(new TPCommand());
+		getCommand("doomsday").setExecutor(new DoomsDay());
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
 	}
 
