@@ -14,7 +14,7 @@ public class XPStorage implements Listener {
 	public void onItemInteract(PlayerInteractEvent event){
 		Player p = event.getPlayer();
 		if(p.getItemInHand().getType() == Material.GLASS_BOTTLE){
-			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK){
+			if(event.getAction() == Action.RIGHT_CLICK_AIR){
 				if(event.getPlayer().isSneaking() == true){
 					event.setCancelled(true);
 					if(p.getLevel() >= 1){
@@ -33,7 +33,7 @@ public class XPStorage implements Listener {
 				return;
 			}
 		} else if (p.getItemInHand().getType() == Material.EXP_BOTTLE) {
-			if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK){
+			if(event.getAction() == Action.RIGHT_CLICK_AIR){
 				event.setCancelled(true);
 				p.getInventory().removeItem(new ItemStack(Material.EXP_BOTTLE, 1));
 				p.getInventory().addItem(new ItemStack(Material.GLASS_BOTTLE, 1));
