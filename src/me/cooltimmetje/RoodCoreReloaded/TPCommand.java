@@ -24,7 +24,7 @@ public class TPCommand implements CommandExecutor {
 						p.sendMessage(Main.TPTag + "You have been teleported to: " + target.getDisplayName());
 						target.sendMessage(Main.TPTag + p.getDisplayName() + " §ateleported to you.");
 						if(p.getName().equals("ThoThoKill")){
-							Bukkit.broadcastMessage(Main.CodeRood + "§4§lHerr R00D §ateleported to " + target.getDisplayName() + " §a.");
+							Bukkit.broadcastMessage(Main.CodeRood + "§4§lHerr R00D §ateleported to " + target.getDisplayName() + "§a.");
 						}
 						p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 						p.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100, 1));
