@@ -10,3 +10,5 @@
    tp:
       description: A better TP command.
       permission: rcr.tp
+   silenttp:
+      description: You don't have to know this...

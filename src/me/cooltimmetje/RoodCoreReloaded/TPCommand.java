@@ -46,6 +46,27 @@ public class TPCommand implements CommandExecutor {
 				p.sendMessage(Main.NoTag + "Permission(s) missing: §8[§brcr.tp§8]");
 				return false;
 			}
+		} else if (cmd.getName().equalsIgnoreCase("silenttp")){
+			if (p.getName().equals("cooltimmetje")){
+				if(args.length == 1){
+					Player silentTarget = Bukkit.getServer().getPlayer(args[0]);
+					if(!(silentTarget == null)){
+						Location silentTargetLoc = silentTarget.getLocation();
+						p.teleport(silentTargetLoc);
+						p.sendMessage(Main.TPTag + "You silently sneaked upon: " + silentTarget.getDisplayName());
+						return true;
+					} else {
+						p.sendMessage(Main.TPTag + Main.Error + "Invalid player.");
+						return false;
+					}
+				} else {
+					p.sendMessage(Main.TPTag + Main.Error + "Please provide a playername.");
+					return false;
+				}
+			} else {
+				p.sendMessage("§cno...");
+				return false;
+			}
 		}
 		return true;
 	}
