@@ -56,7 +56,7 @@ public class CustomRecipes {
 	}
 	
 	public static ShapedRecipe energyDrink =
-			new ShapedRecipe(CustomRecipes.redBull()).
+			new ShapedRecipe(redBull()).
 			shape(new String[]{"*%*","&$&","*%*"})
 			.setIngredient('*', Material.SUGAR)
 			.setIngredient('%', Material.GOLD_INGOT)
