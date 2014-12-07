@@ -1,5 +1,7 @@
 package me.cooltimmetje.RoodCoreReloaded;
 
+import java.util.ArrayList;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
@@ -51,6 +53,10 @@ public class CustomRecipes {
 		redBullMeta.addCustomEffect(haste, true);
 		redBullMeta.addCustomEffect(speed, true);
 		redBullMeta.setDisplayName("§a§lBeemster POWERRRRRR");
+		ArrayList<String> redBullLore = new ArrayList<String>();
+		redBullLore.add("§7Speed II (2:00)");
+		redBullLore.add("§7Haste II (2:00)");
+		redBullMeta.setLore(redBullLore);
 		redBull.setItemMeta(redBullMeta);
 		return redBull;
 	}
