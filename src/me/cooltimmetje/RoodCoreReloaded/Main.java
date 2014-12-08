@@ -12,10 +12,11 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 
 	public void onEnable() {
 		plugin = this;
-		registerEvents(this, new XPStorage());
+		registerEvents(this, new XPStorage(), new Transmute());
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("silenttp").setExecutor(new TPCommand());
 		getCommand("doomsday").setExecutor(new DoomsDay());
+		getCommand("transmute").setExecutor(new Transmute());
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
 		getServer().addRecipe(CustomRecipes.netherrack);
 		getServer().addRecipe(CustomRecipes.netherQuarts);
@@ -46,7 +47,8 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static String NoTag = "§e>§6>§c> §a";
 	public static String Error = "§c§lERROR §a";
 	public static String CodeRood = "§8[§4§lCodeR00D§8] §a";
-	public static String XpTag = "§8[§aXP§8] §a";
+	public static String XpTag = "§8[§cXP§8] §a";
+	public static String TransTag = "§8[§cTransmute§8] §a";
 
 
 }
