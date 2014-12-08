@@ -53,6 +53,8 @@ public class Transmute implements Listener, CommandExecutor {
 		
 		ItemStack transItem = new ItemStack(pItemHand.getType(), pItemHand.getAmount(), (short)pItemHand.getDurability());
 		log.setItem(8, transItem);	
+		
+		p.openInventory(log);
 	}
 	
 }
