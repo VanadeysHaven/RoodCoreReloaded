@@ -63,12 +63,12 @@ public class TransmuteLog implements Listener {
 		switch (event.getCurrentItem().getType()){
 		case LOG:
 			p.getInventory().addItem(new ItemStack(Material.LOG, pItemHand.getAmount(), (short)event.getCurrentItem().getDurability()));
-			p.getInventory().remove(new ItemStack(pItemHand.getType(), pItemHand.getAmount(), (short)pItemHand.getDurability()));
+			p.getInventory().removeItem(new ItemStack(pItemHand.getType(), pItemHand.getAmount(), (short)pItemHand.getDurability()));
 			p.closeInventory();
 			break;
 		case LOG_2:
 			p.getInventory().addItem(new ItemStack(Material.LOG_2, pItemHand.getAmount(), (short)event.getCurrentItem().getDurability()));
-			p.getInventory().remove(new ItemStack(pItemHand.getType(), pItemHand.getAmount(), (short)pItemHand.getDurability()));
+			p.getInventory().removeItem(new ItemStack(pItemHand.getType(), pItemHand.getAmount(), (short)pItemHand.getDurability()));
 			p.closeInventory();
 		default:
 			break;
