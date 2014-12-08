@@ -46,7 +46,7 @@ public class TransmuteLog implements Listener {
 
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent event){
-		if(!ChatColor.stripColor(event.getInventory().getName()).equalsIgnoreCase("transmute"))
+		if(!ChatColor.stripColor(event.getInventory().getName()).equalsIgnoreCase("transmute » log"))
 			return;
 		Player p = (Player) event.getWhoClicked();
 		ItemStack pItemHand = p.getInventory().getItemInHand();
