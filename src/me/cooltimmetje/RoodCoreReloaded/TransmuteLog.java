@@ -56,7 +56,7 @@ public class TransmuteLog implements Listener {
 			return;
 		}
 		
-		if (!(event.getInventory().getHolder() == null)){
+		if (event.getInventory().getHolder().equals(p.getName())){
 			return;
 		}
 
