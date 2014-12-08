@@ -61,11 +61,12 @@ public class CustomRecipes {
 		return redBull;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ShapedRecipe energyDrink =
 			new ShapedRecipe(redBull()).
 			shape(new String[]{"*%*","&$&","*%*"})
 			.setIngredient('*', Material.SUGAR)
-			.setIngredient('%', Material.GOLD_INGOT)
+			.setIngredient('%', Material.INK_SACK, 4)
 			.setIngredient('&', Material.IRON_INGOT)
 			.setIngredient('$', Material.POTION);
 
