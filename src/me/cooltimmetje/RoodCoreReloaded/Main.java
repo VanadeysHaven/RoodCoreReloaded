@@ -12,7 +12,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 
 	public void onEnable() {
 		plugin = this;
-		registerEvents(this, new XPStorage(), new TransmuteLog());
+		registerEvents(this, new XPStorage(), new TransmuteLog(), new TransmuteDirt());
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("silenttp").setExecutor(new TPCommand());
 		getCommand("doomsday").setExecutor(new DoomsDay());

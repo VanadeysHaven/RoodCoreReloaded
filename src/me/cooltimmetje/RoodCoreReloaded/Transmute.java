@@ -18,9 +18,12 @@ public class Transmute implements Listener, CommandExecutor {
 				if(transItem.equals(Material.LOG) || transItem.equals(Material.LOG_2)){
 					TransmuteLog.openLog(p);
 					return true;
+				} else if(transItem.equals(Material.GRASS) || transItem.equals(Material.DIRT) || transItem.equals(Material.SAND)){
+					TransmuteDirt.openDirt(p);
+					return true;
 				} else {
 					p.sendMessage(Main.TransTag + Main.Error + "This item cannot be transmuted.");
-					p.sendMessage(Main.NoTag + "Supported items: §8[§bOak Wood §8- §bBirch Wood §8- §bSpruce Wood §8- §bJungle Wood §8- §bAcacia Wood §8- §bDark Oak Wood§8]");
+					p.sendMessage(Main.NoTag + "Supported items: §7§oList coming SoonTM");
 					return false;
 				}
 			} else {
