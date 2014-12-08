@@ -1,5 +1,7 @@
 package me.cooltimmetje.RoodCoreReloaded;
 
+import java.util.ArrayList;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -9,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class Transmute implements Listener, CommandExecutor {
 
@@ -52,6 +55,13 @@ public class Transmute implements Listener, CommandExecutor {
 		log.setItem(5, darkOakLog);
 		
 		ItemStack transItem = new ItemStack(pItemHand.getType(), pItemHand.getAmount(), (short)pItemHand.getDurability());
+		ItemMeta transItemMeta = transItem.getItemMeta();
+		transItemMeta.setDisplayName("§a§lTRANSMUTING:");
+		ArrayList<String> transItemLore = new ArrayList<String>();
+		transItemLore.add("§7Item name: §b" + pItemHand.getItemMeta().getDisplayName());
+		transItemLore.add("§7Amount: §b" + pItemHand.getAmount());
+		transItemMeta.setLore(transItemLore);
+		transItem.setItemMeta(transItemMeta);
 		log.setItem(8, transItem);	
 		
 		p.openInventory(log);
