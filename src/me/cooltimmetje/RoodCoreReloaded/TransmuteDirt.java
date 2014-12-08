@@ -15,7 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class TransmuteDirt implements Listener {
 
-	public static void openLog(Player p){
+	public static void openDirt(Player p){
 		ItemStack pItemHand = p.getInventory().getItemInHand();
 		Inventory dirt = Bukkit.createInventory(null, 9, "§9Transmute §8» §9Dirt");
 
