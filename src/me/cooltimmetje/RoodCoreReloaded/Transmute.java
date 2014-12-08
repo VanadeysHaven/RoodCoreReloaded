@@ -6,7 +6,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
-import org.bukkit.inventory.ItemStack;
 
 public class Transmute implements Listener, CommandExecutor {
 
@@ -14,9 +13,9 @@ public class Transmute implements Listener, CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
 		if(cmd.getLabel().equalsIgnoreCase("transmute")){
-			ItemStack transItem = p.getInventory().getItemInHand();
+			Material transItem = p.getInventory().getItemInHand().getType();
 			if(!transItem.equals(null)){
-				if(transItem.equals(Material.LOG) || transItem.equals(Material.LOG_2)){
+				if(transItem.equals(Material.LOG) || transItem.equals(Material.LOG)){
 					p.sendMessage("§7§oOpen inventory...");
 					return true;
 				} else {
