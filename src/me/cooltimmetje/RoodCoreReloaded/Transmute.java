@@ -18,6 +18,7 @@ public class Transmute implements Listener, CommandExecutor {
 			if(!transItem.equals(null)){
 				if(transItem.equals(Material.LOG) || transItem.equals(Material.LOG_2)){
 					p.sendMessage("§7§oOpen inventory...");
+					return true;
 				} else {
 					p.sendMessage(Main.TransTag + Main.Error + "This item cannot be transmuted.");
 					p.sendMessage(Main.NoTag + "Supported items: §8[§bOak Wood §8- §bBirch Wood §8- §bSpruce Wood §8- §bJungle Wood §8- §bAcacia Wood §8- §bDark Oak Wood§8]");
