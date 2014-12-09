@@ -18,12 +18,18 @@ public class Drugs implements Listener {
 		if(p.getItemInHand().getType() == Material.ARROW){
 			if(event.getAction() == Action.RIGHT_CLICK_AIR){
 				if(p.getItemInHand().hasItemMeta() == true){
-					if(!p.hasPotionEffect(PotionEffectType.SPEED) || !p.hasPotionEffect(PotionEffectType.CONFUSION)){
-						p.sendMessage(Main.NoTag + "You feel a bit confused, but also very powerfull.");
-						p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 2));
-						p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0));
-						p.getInventory().removeItem(new ItemStack(CustomRecipes.heroine()));
-						return;
+					event.setCancelled(true);
+					if(!p.hasPotionEffect(PotionEffectType.SPEED)){
+						if(!p.hasPotionEffect(PotionEffectType.CONFUSION)){
+							p.sendMessage(Main.NoTag + "You feel a bit confused, but also very powerfull.");
+							p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 2));
+							p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0));
+							p.getInventory().removeItem(new ItemStack(CustomRecipes.heroine()));
+							return;
+						} else {
+							p.sendMessage(Main.NoTag + "§bYou think by yourself: §a§oI'd better not take another shot, I'm sure it will harm me.");
+							return;
+						}
 					} else {
 						p.sendMessage(Main.NoTag + "§bYou think by yourself: §a§oI'd better not take another shot, I'm sure it will harm me.");
 						return;
@@ -38,5 +44,6 @@ public class Drugs implements Listener {
 			return;
 		}
 	}
-
 }
+
+
