@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -60,18 +61,34 @@ public class CustomRecipes {
 		redBull.setItemMeta(redBullMeta);
 		return redBull;
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static ShapedRecipe energyDrink =
-			new ShapedRecipe(redBull()).
-			shape(new String[]{"*%*","&$&","*%*"})
-			.setIngredient('*', Material.SUGAR)
-			.setIngredient('%', Material.INK_SACK, 4)
-			.setIngredient('&', Material.IRON_INGOT)
-			.setIngredient('$', Material.POTION);
+	new ShapedRecipe(redBull()).
+	shape(new String[]{"*%*","&$&","*%*"})
+	.setIngredient('*', Material.SUGAR)
+	.setIngredient('%', Material.INK_SACK, 4)
+	.setIngredient('&', Material.IRON_INGOT)
+	.setIngredient('$', Material.POTION);
 
-
-
-
-
+	public static ItemStack heroine(){
+		ItemStack heroine = new ItemStack(Material.ARROW);
+		ItemMeta heroineMeta = heroine.getItemMeta();
+		heroineMeta.setDisplayName("§cHeroine");
+		ArrayList<String> heroineLore = new ArrayList<String>();
+		heroineLore.add(Main.drugWarning);
+		heroineLore.add("§7Nausea (0:30)");
+		heroineLore.add("§7Speed III (2:00)");
+		heroineLore.add(Main.drugIRL);
+		heroineMeta.setLore(heroineLore);
+		heroine.setItemMeta(heroineMeta);
+		return heroine();
+	}
+	
+	public static ShapedRecipe heroine =
+			new ShapedRecipe(heroine()).shape(" # ","$%^","   ")
+			.setIngredient('#', Material.GLASS)
+			.setIngredient('$', Material.SPIDER_EYE)
+			.setIngredient('%', Material.ARROW)
+			.setIngredient('^', Material.SUGAR);
 }

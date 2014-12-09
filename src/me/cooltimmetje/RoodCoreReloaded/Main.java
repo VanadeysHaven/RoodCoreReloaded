@@ -12,7 +12,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 
 	public void onEnable() {
 		plugin = this;
-		registerEvents(this, new XPStorage(), new TransmuteLog(), new TransmuteDirt());
+		registerEvents(this, new XPStorage(), new TransmuteLog(), new TransmuteDirt(), new Drugs());
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("silenttp").setExecutor(new TPCommand());
 		getCommand("doomsday").setExecutor(new DoomsDay());
@@ -49,6 +49,8 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static String CodeRood = "§8[§4§lCodeR00D§8] §a";
 	public static String XpTag = "§8[§cXP§8] §a";
 	public static String TransTag = "§8[§cTransmute§8] §a";
+	public static String drugWarning = "§c§lWARNING §6This is a drug, take it on own risk.";
+	public static String drugIRL = "§c§lWARNING §6Don't do drugs IRL. §oDrugs are bad, mkay?";
 
 
 }
