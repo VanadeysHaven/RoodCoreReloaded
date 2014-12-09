@@ -20,30 +20,30 @@ public class CustomRecipes {
 	.addIngredient(Material.GLASS);
 
 	public static ShapedRecipe netherrack = 
-			new ShapedRecipe( new ItemStack(Material.NETHERRACK, 4)).
-			shape(new String[] { "*% ", "%* ", "   " })
-			.setIngredient('%', Material.SPIDER_EYE)
-			.setIngredient('*', Material.COBBLESTONE);
+			new ShapedRecipe( new ItemStack(Material.NETHERRACK, 4))
+	.shape(new String[] { "*% ", "%* ", "   " })
+	.setIngredient('%', Material.SPIDER_EYE)
+	.setIngredient('*', Material.COBBLESTONE);
 
 	public static ShapedRecipe netherQuarts = 
-			new ShapedRecipe( new ItemStack(Material.QUARTZ, 1)).
-			shape(new String[] { "   ", "%*%", "   " })
-			.setIngredient('%', Material.PAPER)
-			.setIngredient('*', Material.NETHERRACK);
+			new ShapedRecipe( new ItemStack(Material.QUARTZ, 1))
+	.shape(new String[] { "   ", "%*%", "   " })
+	.setIngredient('%', Material.PAPER)
+	.setIngredient('*', Material.NETHERRACK);
 
 	public static ShapedRecipe blazeRod = 
-			new ShapedRecipe( new ItemStack(Material.BLAZE_ROD, 1)).
-			shape(new String[] { "%%%", "%*%", "%&%" })
-			.setIngredient('%', Material.GLOWSTONE_DUST)
-			.setIngredient('*', Material.STICK)
-			.setIngredient('&', Material.GOLD_INGOT);
+			new ShapedRecipe( new ItemStack(Material.BLAZE_ROD, 1))
+	.shape(new String[] { "%%%", "%*%", "%&%" })
+	.setIngredient('%', Material.GLOWSTONE_DUST)
+	.setIngredient('*', Material.STICK)
+	.setIngredient('&', Material.GOLD_INGOT);
 
 	public static ShapedRecipe netherWart = 
-			new ShapedRecipe( new ItemStack(Material.NETHER_STALK, 1)).
-			shape(new String[] { "%*%", "*&*", "%*%" })
-			.setIngredient('%', Material.GLOWSTONE_DUST)
-			.setIngredient('*', Material.NETHERRACK)
-			.setIngredient('&', Material.PUMPKIN_SEEDS);
+			new ShapedRecipe( new ItemStack(Material.NETHER_STALK, 1))
+	.shape(new String[] { "%*%", "*&*", "%*%" })
+	.setIngredient('%', Material.GLOWSTONE_DUST)
+	.setIngredient('*', Material.NETHERRACK)
+	.setIngredient('&', Material.PUMPKIN_SEEDS);
 
 
 	public static ItemStack redBull(){
@@ -64,8 +64,8 @@ public class CustomRecipes {
 
 	@SuppressWarnings("deprecation")
 	public static ShapedRecipe energyDrink =
-	new ShapedRecipe(redBull()).
-	shape(new String[]{"*%*","&$&","*%*"})
+	new ShapedRecipe(redBull())
+	.shape(new String[]{"*%*","&$&","*%*"})
 	.setIngredient('*', Material.SUGAR)
 	.setIngredient('%', Material.INK_SACK, 4)
 	.setIngredient('&', Material.IRON_INGOT)
@@ -82,7 +82,7 @@ public class CustomRecipes {
 		heroineLore.add(Main.drugIRL);
 		heroineMeta.setLore(heroineLore);
 		heroine.setItemMeta(heroineMeta);
-		return heroine();
+		return heroine;
 	}
 
 	public static ShapedRecipe heroine =
