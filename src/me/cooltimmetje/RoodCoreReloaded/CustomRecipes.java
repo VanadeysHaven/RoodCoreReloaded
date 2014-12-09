@@ -84,11 +84,12 @@ public class CustomRecipes {
 		heroine.setItemMeta(heroineMeta);
 		return heroine();
 	}
-	
+
 	public static ShapedRecipe heroine =
-			new ShapedRecipe(heroine()).shape(" # ","$%^","   ")
-			.setIngredient('#', Material.GLASS)
-			.setIngredient('$', Material.SPIDER_EYE)
-			.setIngredient('%', Material.ARROW)
-			.setIngredient('^', Material.SUGAR);
+			new ShapedRecipe(heroine())
+	.shape(new String[]{" # ","$%^","   "})
+	.setIngredient('#', Material.GLASS)
+	.setIngredient('$', Material.SPIDER_EYE)
+	.setIngredient('%', Material.ARROW)
+	.setIngredient('^', Material.SUGAR);
 }
