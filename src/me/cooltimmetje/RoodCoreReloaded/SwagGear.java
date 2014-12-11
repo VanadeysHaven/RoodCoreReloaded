@@ -33,6 +33,7 @@ public class SwagGear implements CommandExecutor {
 				p.sendMessage(Main.NoTag + "p.setSwagLevel(§lover 9000§a);");
 				p.getInventory().clear();
 				p.getInventory().setItem(0, swagSword());
+				return true;
 			} else {
 				p.sendMessage(Main.NoTag + "hoper...");
 				return false;
