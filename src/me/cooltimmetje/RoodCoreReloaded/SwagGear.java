@@ -42,7 +42,7 @@ public class SwagGear implements CommandExecutor {
 		ItemMeta swagPickNormalSilkMeta = swagPickNormalSilk.getItemMeta();
 		swagPickNormalSilkMeta.addEnchant(Enchantment.DURABILITY, 2000, true);
 		swagPickNormalSilkMeta.addEnchant(Enchantment.DIG_SPEED, 5, true);
-		swagPickNormalSilkMeta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 3, true);
+		swagPickNormalSilkMeta.addEnchant(Enchantment.SILK_TOUCH, 1, true);
 		swagPickNormalSilkMeta.setDisplayName("§a§lSwagger Pickaxe §8» §bNormal Speed §9- §bSilk Touch");
 		swagPickNormalSilk.setItemMeta(swagPickNormalSilkMeta);
 		return swagPickNormalSilk;
@@ -64,14 +64,14 @@ public class SwagGear implements CommandExecutor {
 		ItemMeta swagPickFastSilkMeta = swagPickFastSilk.getItemMeta();
 		swagPickFastSilkMeta.addEnchant(Enchantment.DURABILITY, 2000, true);
 		swagPickFastSilkMeta.addEnchant(Enchantment.DIG_SPEED, 100, true);
-		swagPickFastSilkMeta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 3, true);
+		swagPickFastSilkMeta.addEnchant(Enchantment.SILK_TOUCH, 1, true);
 		swagPickFastSilkMeta.setDisplayName("§a§lSwagger Pickaxe §8» §bFast Speed §9- §bSilk Touch");
 		swagPickFastSilk.setItemMeta(swagPickFastSilkMeta);
 		return swagPickFastSilk;
 	}
 	
 	public static ItemStack swagAxe(){
-		ItemStack swagAxe = new ItemStack(Material.DIAMOND_SPADE);
+		ItemStack swagAxe = new ItemStack(Material.DIAMOND_AXE);
 		ItemMeta swagAxeMeta = swagAxe.getItemMeta();
 		swagAxeMeta.addEnchant(Enchantment.DURABILITY, 2000, true);
 		swagAxeMeta.addEnchant(Enchantment.DIG_SPEED, 5, true);
@@ -133,7 +133,7 @@ public class SwagGear implements CommandExecutor {
 	}
 	
 	public static ItemStack swagBoots() {
-		ItemStack swagBoots = new ItemStack(Material.DIAMOND_HELMET);
+		ItemStack swagBoots = new ItemStack(Material.DIAMOND_BOOTS);
 		ItemMeta swagBootsMeta = swagBoots.getItemMeta();
 		swagBootsMeta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 4, true);
 		swagBootsMeta.addEnchant(Enchantment.PROTECTION_FIRE, 4, true);
