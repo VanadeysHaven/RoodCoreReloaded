@@ -18,3 +18,6 @@
       description: open transmute system
    swaggergear:
       description: gives swag gear
+   ci:
+      description: A better clear inventory command.
+      permission: rcr.ci

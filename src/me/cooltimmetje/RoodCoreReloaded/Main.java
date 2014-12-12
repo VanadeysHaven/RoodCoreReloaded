@@ -18,6 +18,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		getCommand("doomsday").setExecutor(new DoomsDay());
 		getCommand("transmute").setExecutor(new Transmute());
 		getCommand("swaggergear").setExecutor(new SwagGear());
+		getCommand("ci").setExecutor(new BetterClearInventory());
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
 		getServer().addRecipe(CustomRecipes.netherrack);
 		getServer().addRecipe(CustomRecipes.netherQuarts);
@@ -50,10 +51,11 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static String Error = "§c§lERROR §a";
 	public static String CodeRood = "§8[§4§lCodeR00D§8] §a";
 	public static String XpTag = "§8[§cXP§8] §a";
+	public static String CiTag = "§8[§Clear Inventory§8] §a";
 	public static String TransTag = "§8[§cTransmute§8] §a";
 	public static String drugWarning = "§c§lWARNING §6This is a drug, take it on own risk.";
 	public static String drugIRL = "§c§lWARNING §6Don't do drugs IRL. §oDrugs are bad, mkay?";
-
+	public static String noPerm= "You do not have access to this command.";
 
 }
 
