@@ -16,6 +16,7 @@ public class BetterClearInventory implements CommandExecutor {
 				p.getInventory().setChestplate(null);
 				p.getInventory().setLeggings(null);
 				p.getInventory().setBoots(null);
+				p.sendMessage(Main.CiTag + "Your inventory has been cleared.");
 				return true;
 			} else {
 				p.sendMessage(Main.CiTag + Main.Error + Main.noPerm);
