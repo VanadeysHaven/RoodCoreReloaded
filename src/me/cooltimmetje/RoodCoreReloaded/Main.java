@@ -26,6 +26,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		getServer().addRecipe(CustomRecipes.netherWart);
 		getServer().addRecipe(CustomRecipes.energyDrink);
 		getServer().addRecipe(CustomRecipes.heroine);
+		getServer().addRecipe(CustomRecipes.cocaine);
 	}
 
 	public void onDisable() {
