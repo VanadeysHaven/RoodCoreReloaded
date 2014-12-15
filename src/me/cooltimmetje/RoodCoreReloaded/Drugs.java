@@ -35,25 +35,22 @@ public class Drugs implements Listener {
 						return;
 					}
 				}
-			} else if(p.getItemInHand().getType() == Material.SUGAR){
-				if(event.getAction() == Action.RIGHT_CLICK_AIR){
-					if(p.getItemInHand().hasItemMeta() == true){
-						event.setCancelled(true);
-						if(!p.hasPotionEffect(PotionEffectType.SPEED)){
-							if(!p.hasPotionEffect(PotionEffectType.CONFUSION)){
-								if(!p.hasPotionEffect(PotionEffectType.FAST_DIGGING)){
-									if(!p.hasPotionEffect(PotionEffectType.BLINDNESS)){
-										p.sendMessage(Main.NoTag + "You feel a bit confused, but also very powerfull.");
-										p.sendMessage(Main.NoTag + "§oSniff...");
-										p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1));
-										p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0));
-										p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 150, 0));
-										p.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 2400, 1));
-										p.getInventory().removeItem(new ItemStack(CustomRecipes.heroine()));
-									} else {
-										p.sendMessage(Main.NoTag + Main.drugHarm);
-										return;
-									}
+			}
+		} else if(p.getItemInHand().getType() == Material.SUGAR){
+			if(event.getAction() == Action.RIGHT_CLICK_AIR){
+				if(p.getItemInHand().hasItemMeta() == true){
+					event.setCancelled(true);
+					if(!p.hasPotionEffect(PotionEffectType.SPEED)){
+						if(!p.hasPotionEffect(PotionEffectType.CONFUSION)){
+							if(!p.hasPotionEffect(PotionEffectType.FAST_DIGGING)){
+								if(!p.hasPotionEffect(PotionEffectType.BLINDNESS)){
+									p.sendMessage(Main.NoTag + "You feel a bit confused, but also very powerfull.");
+									p.sendMessage(Main.NoTag + "§oSniff...");
+									p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1));
+									p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0));
+									p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 150, 0));
+									p.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 2400, 1));
+									p.getInventory().removeItem(new ItemStack(CustomRecipes.heroine()));
 								} else {
 									p.sendMessage(Main.NoTag + Main.drugHarm);
 									return;
@@ -66,12 +63,16 @@ public class Drugs implements Listener {
 							p.sendMessage(Main.NoTag + Main.drugHarm);
 							return;
 						}
+					} else {
+						p.sendMessage(Main.NoTag + Main.drugHarm);
+						return;
 					}
 				}
 			}
 		}
 	}
 }
+
 
 
 
