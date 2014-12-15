@@ -50,7 +50,7 @@ public class Drugs implements Listener {
 									p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0));
 									p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 150, 0));
 									p.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 2400, 1));
-									p.getInventory().removeItem(new ItemStack(CustomRecipes.heroine()));
+									p.getInventory().removeItem(new ItemStack(CustomRecipes.cocaine()));
 								} else {
 									p.sendMessage(Main.NoTag + Main.drugHarm);
 									return;
