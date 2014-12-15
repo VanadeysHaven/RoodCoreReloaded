@@ -76,9 +76,9 @@ public class CustomRecipes {
 		ItemMeta heroineMeta = heroine.getItemMeta();
 		heroineMeta.setDisplayName("§cHeroine");
 		ArrayList<String> heroineLore = new ArrayList<String>();
-		heroineLore.add(Main.drugWarning);
-		heroineLore.add("§7Nausea (0:30)");
+		heroineLore.add("§c§oNausea (0:30)");
 		heroineLore.add("§7Speed III (2:00)");
+		heroineLore.add(Main.drugWarning);
 		heroineLore.add(Main.drugIRL);
 		heroineMeta.setLore(heroineLore);
 		heroine.setItemMeta(heroineMeta);
@@ -92,4 +92,28 @@ public class CustomRecipes {
 	.setIngredient('$', Material.SPIDER_EYE)
 	.setIngredient('%', Material.ARROW)
 	.setIngredient('^', Material.SUGAR);
+	
+	public static ItemStack cocaine(){
+		ItemStack cocaine = new ItemStack(Material.ARROW);
+		ItemMeta cocaineMeta = cocaine.getItemMeta();
+		cocaineMeta.setDisplayName("§cCocaine");
+		ArrayList<String> cocaineLore = new ArrayList<String>();
+		cocaineLore.add("§c§oNausea (0:30)");
+		cocaineLore.add("§c§oBlindness (0:15)");
+		cocaineLore.add("§7Speed II (2:00)");
+		cocaineLore.add("§7Haste II (2:00)");
+		cocaineLore.add(Main.drugWarning);
+		cocaineLore.add(Main.drugIRL);
+		cocaineMeta.setLore(cocaineLore);
+		cocaine.setItemMeta(cocaineMeta);
+		return cocaine;
+	}
+	
+	public static ShapedRecipe cocaine = 
+			new ShapedRecipe(cocaine())
+	.shape(new String[]{"$%$","%#%","$%$"})
+	.setIngredient('#', Material.SPIDER_EYE)
+	.setIngredient('%', Material.SUGAR)
+	.setIngredient('$', Material.GLOWSTONE_DUST);
 }
+
