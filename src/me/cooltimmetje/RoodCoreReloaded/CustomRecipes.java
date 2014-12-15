@@ -94,7 +94,7 @@ public class CustomRecipes {
 	.setIngredient('^', Material.SUGAR);
 	
 	public static ItemStack cocaine(){
-		ItemStack cocaine = new ItemStack(Material.ARROW);
+		ItemStack cocaine = new ItemStack(Material.SUGAR);
 		ItemMeta cocaineMeta = cocaine.getItemMeta();
 		cocaineMeta.setDisplayName("§cCocaine");
 		ArrayList<String> cocaineLore = new ArrayList<String>();
