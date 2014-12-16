@@ -45,10 +45,10 @@ public class Drugs implements Listener {
 							if(!p.hasPotionEffect(PotionEffectType.FAST_DIGGING)){
 								if(!p.hasPotionEffect(PotionEffectType.BLINDNESS)){
 									p.sendMessage(Main.NoTag + "You feel a bit confused, but also very powerfull.");
-									p.sendMessage(Main.NoTag + "§oSniff...");
+									p.sendMessage(Main.NoTag + "Â§oSniff...");
 									p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1));
 									p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 0));
-									p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 150, 0));
+									p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 300, 0));
 									p.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 2400, 1));
 									p.getInventory().removeItem(new ItemStack(CustomRecipes.cocaine()));
 								} else {
