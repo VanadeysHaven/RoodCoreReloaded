@@ -7,18 +7,23 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit knows its the main class...
-
 	private static Plugin plugin;
 
 	public void onEnable() {
 		plugin = this;
-		registerEvents(this, new XPStorage(), new TransmuteLog(), new TransmuteDirt(), new Drugs());
+		
+		getLogger().info("[RCR] Registering Events...");
+		registerEvents(this, new XPStorage(), new TransmuteLog(), new TransmuteDirt(), new Drugs(), new JoinQuitEvent());
+		
+		getLogger().info("[RCR] Registering Commands...");
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("silenttp").setExecutor(new TPCommand());
 		getCommand("doomsday").setExecutor(new DoomsDay());
 		getCommand("transmute").setExecutor(new Transmute());
 		getCommand("swaggergear").setExecutor(new SwagGear());
 		getCommand("ci").setExecutor(new BetterClearInventory());
+		
+		getLogger().info("[RCR] Adding recipes...");
 		getServer().addRecipe(CustomRecipes.glowstoneDust);
 		getServer().addRecipe(CustomRecipes.netherrack);
 		getServer().addRecipe(CustomRecipes.netherQuarts);
@@ -27,6 +32,16 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		getServer().addRecipe(CustomRecipes.energyDrink);
 		getServer().addRecipe(CustomRecipes.heroine);
 		getServer().addRecipe(CustomRecipes.cocaine);
+		
+		getLogger().info("[RCR] Hooking into APIs...");
+		if (getServer().getPluginManager().getPlugin("TitleManager") != null && getServer().getPluginManager().getPlugin("TitleManager").isEnabled())
+		    getLogger().info("[RCR] Successfully hooked into TitleManager!");
+		  else {
+		    getLogger().warning("[RCR] Failed to hook into TitleManager, disabling plugin!");
+		    getPluginLoader().disablePlugin(this);
+		  }
+
+		getLogger().info("[RCR] Plugin enabled!");;
 	}
 
 	public void onDisable() {

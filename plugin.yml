@@ -6,6 +6,7 @@
  # name is displayed first
  author: cooltimmetje
  main: me.cooltimmetje.RoodCoreReloaded.Main
+ depend: [TitleManager]
  commands:
    tp:
       description: A better TP command.
