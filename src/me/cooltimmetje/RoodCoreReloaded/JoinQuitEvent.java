@@ -12,7 +12,7 @@ public class JoinQuitEvent implements Listener {
 	@EventHandler
 	public void onPlayerJoin (PlayerJoinEvent event){
 		Player p = event.getPlayer();
-		new TitleObject("§6§lWelcome, " + p.getDisplayName(), TitleObject.TitleType.TITLE).setFadeIn(1).setStay(3).setFadeOut(1).send(p);
+		new TitleObject("§6§lWelcome, " + p.getDisplayName(), TitleObject.TitleType.TITLE).setFadeIn(20).setStay(60).setFadeOut(20).send(p);
 	}
 
 }
