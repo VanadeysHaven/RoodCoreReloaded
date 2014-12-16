@@ -15,8 +15,7 @@ public class JoinQuitEvent implements Listener {
 	@EventHandler
 	public void onPlayerJoin (PlayerJoinEvent event){
 		Player p = event.getPlayer();
-		new TitleObject("§6§lWelcome, §9" + p.getName(), TitleObject.TitleType.TITLE).setFadeIn(20).setStay(60).setFadeOut(20).send(p);
-		new TitleObject("§6§lTo §c§lThe §4#§lTeamR00D §c§lNetwork", TitleObject.TitleType.SUBTITLE).setFadeIn(20).setStay(80).setFadeOut(20).send(p);
+		new TitleObject("§6§lWelcome, §9" + p.getName(), "§6§lTo §c§lThe §4#§lTeamR00D §c§lNetwork").setFadeIn(20).setStay(60).setFadeOut(20).send(p);
 		
 		for (Player pl : Bukkit.getOnlinePlayers()){
 			new ActionbarTitleObject(p.getName() + " §ajoined! §b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)").send(pl);
