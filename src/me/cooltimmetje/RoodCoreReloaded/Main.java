@@ -12,7 +12,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit knows its the main class...
 	private static Plugin plugin;
 
-	@SuppressWarnings("deprecation")
 	public void onEnable() {
 		plugin = this;
 		
@@ -46,9 +45,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		  }
 		
 		getLogger().info("[RCR] Setting up tab list.");
-		for (Player pl : Bukkit.getOnlinePlayers()){
-			new TabTitleObject("§aWelcome to §cThe §4#TeamR00D §cNetwork", pl.getDisplayName() +  "§b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8" ).send(pl);
-		}
+		setTablist();
 
 		getLogger().info("[RCR] Plugin enabled!");
 	}
@@ -81,7 +78,16 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static String drugWarning = "§c§lWARNING §6This is a drug, take it on own risk.";
 	public static String drugIRL = "§6Don't do drugs IRL. §oDrugs are bad, mkay?";
 	public static String drugHarm = "§bYou think by yourself: §a§oI'd better not take another shot, I'm sure it will harm me.";
-	public static String noPerm= "You do not have access to this command.";
+	public static String noPerm = "You do not have access to this command.";
+	public static String tabHead = "§aWelcome to §cThe §4#TeamR00D §cNetwork";
+	
+	
+	@SuppressWarnings("deprecation")
+	public static void setTablist(){
+		for (Player pl : Bukkit.getOnlinePlayers()){
+			new TabTitleObject(tabHead, pl.getDisplayName() +  " §b- §8(§6" +  Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)" ).send(pl);
+		}
+	}
 
 }
 
