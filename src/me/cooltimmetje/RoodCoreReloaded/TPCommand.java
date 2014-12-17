@@ -1,7 +1,11 @@
 package me.cooltimmetje.RoodCoreReloaded;
 
+import io.puharesource.mc.titlemanager.api.ActionbarTitleObject;
+import io.puharesource.mc.titlemanager.api.TitleObject;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,6 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class TPCommand implements CommandExecutor {
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
@@ -21,15 +26,18 @@ public class TPCommand implements CommandExecutor {
 					if(!(target == null)){
 						Location targetLoc = target.getLocation();
 						p.teleport(targetLoc);
-						p.sendMessage(Main.TPTag + "You have been teleported to: " + target.getDisplayName());
-						target.sendMessage(Main.TPTag + p.getDisplayName() + " §ateleported to you.");
+						new ActionbarTitleObject(Main.TPTag + "You have been teleported to: " + target.getDisplayName()).send(p);
+						new TitleObject(Main.TPTag, p.getDisplayName() + " §ateleported to you.").setFadeIn(20).setStay(60).setFadeOut(20).send(target);
 						if(p.getName().equals("ThoThoKill")){
 							Bukkit.broadcastMessage(Main.CodeRood + "§4§lHerr R00D §ateleported to " + target.getDisplayName() + "§a.");
+							
+							for(Player pl : Bukkit.getOnlinePlayers()){
+							new TitleObject(Main.CodeRood, "§4Herr R00D §ateleported to "+ target.getDisplayName()).setFadeIn(0).setStay(100).setFadeOut(20).send(pl);
+							pl.playSound(pl.getLocation(), Sound.NOTE_PLING, 100, 1);
+							}
 						}
 						p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 						p.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100, 1));
-						p.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 40, 1));
-						p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 1));
 						target.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 						target.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100, 1));
 						return true;
