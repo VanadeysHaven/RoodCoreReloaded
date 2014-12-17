@@ -1,6 +1,9 @@
 package me.cooltimmetje.RoodCoreReloaded;
 
+import io.puharesource.mc.titlemanager.api.TabTitleObject;
+
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -9,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit knows its the main class...
 	private static Plugin plugin;
 
+	@SuppressWarnings("deprecation")
 	public void onEnable() {
 		plugin = this;
 		
@@ -40,8 +44,13 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 		    getLogger().warning("[RCR] Failed to hook into TitleManager, disabling plugin!");
 		    getPluginLoader().disablePlugin(this);
 		  }
+		
+		getLogger().info("[RCR] Setting up tab list.");
+		for (Player pl : Bukkit.getOnlinePlayers()){
+			new TabTitleObject("§aWelcome to §cThe §4#TeamR00D §cNetwork", pl.getDisplayName() +  "§b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8" ).send(pl);
+		}
 
-		getLogger().info("[RCR] Plugin enabled!");;
+		getLogger().info("[RCR] Plugin enabled!");
 	}
 
 	public void onDisable() {

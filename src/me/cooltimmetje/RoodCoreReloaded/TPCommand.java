@@ -32,9 +32,9 @@ public class TPCommand implements CommandExecutor {
 								}
 							}
 						} else {
-							new ActionbarTitleObject(Main.TPTag + "You have been teleported to: " + target.getDisplayName()).send(p);
 							new TitleObject(Main.TPTag, p.getDisplayName() + " §ateleported to you.").setFadeIn(20).setStay(60).setFadeOut(20).send(target);
 						}
+						new ActionbarTitleObject(Main.TPTag + "You have been teleported to: " + target.getDisplayName()).send(p);
 						p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 						p.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100, 1));
 						target.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
