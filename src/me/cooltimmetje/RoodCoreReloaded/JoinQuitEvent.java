@@ -18,25 +18,26 @@ public class JoinQuitEvent implements Listener {
 	public void onPlayerJoin (PlayerJoinEvent event){
 		Player p = event.getPlayer();
 		new TitleObject("§6Welcome, §9" + p.getName(), "§6To §cThe §4#TeamR00D §cNetwork").setFadeIn(20).setStay(60).setFadeOut(20).send(p);
-		
+
 		for (Player pl : Bukkit.getOnlinePlayers()){
 			new ActionbarTitleObject("§9" + p.getName() + " §ajoined! §b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)").send(pl);
 		}
 		Main.setTablist();
 		event.setJoinMessage(Main.NoTag + p.getDisplayName() + " §ajoined! §b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)");
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onPlayerLeave(PlayerQuitEvent event){
 		Player p = event.getPlayer();
-		
+
 		for (Player pl : Bukkit.getOnlinePlayers()){
 			new ActionbarTitleObject("§9" + p.getName() + " §aleft! §b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)").send(pl);
 			int online = Bukkit.getOnlinePlayers().length - 1;
 			new TabTitleObject("§aWelcome to §cThe §4#TeamR00D §cNetwork", pl.getDisplayName() +  " §b- §8(§6" + online + "§8/§6" + Bukkit.getMaxPlayers() + "§8)" ).send(pl);
 		}
-		event.setQuitMessage(Main.NoTag + p.getDisplayName() + " §aleft! §b- §8(§6" + Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)");
+		int online = Bukkit.getOnlinePlayers().length - 1;
+		event.setQuitMessage(Main.NoTag + p.getDisplayName() + " §aleft! §b- §8(§6" + online + "§8/§6" + Bukkit.getMaxPlayers() + "§8)");
 	}
-	
+
 }

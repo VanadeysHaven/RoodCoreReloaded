@@ -86,6 +86,7 @@ public class Main extends JavaPlugin{ //Extending JavaPlugin so that Bukkit know
 	public static void setTablist(){
 		for (Player pl : Bukkit.getOnlinePlayers()){
 			new TabTitleObject(tabHead, pl.getDisplayName() +  " §b- §8(§6" +  Bukkit.getOnlinePlayers().length + "§8/§6" + Bukkit.getMaxPlayers() + "§8)" ).send(pl);
+			pl.setPlayerListName(pl.getDisplayName());
 		}
 	}
 
